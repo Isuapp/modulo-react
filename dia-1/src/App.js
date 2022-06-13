@@ -1,31 +1,23 @@
 import logo from './logo.png';
 import './App.css';
+import modulos from './modulos.json'
 
-const modulos =[
-  {
-    name:'HTML',
-    curso:'Hack a Boss Bootcamp'
-  },
-  {
-    name:'CSS',
-    curso:'Hack a Boss Bootcamp'
-  },
-  {
-    name:'JS',
-    curso:'Hack a Boss Bootcamp'
-  },
-  {
-    name:'NODE',
-    curso:'Hack a Boss Bootcamp'
-  },
-  {
-    name:'REACT',
-    curso:'Hack a Boss Bootcamp'
-  }
-];
+
 
 
 function App() {
+
+    // Generamos automaticamente el li de cada producto
+  const modulosLi = modulos.map((modulo)=>{
+      return(
+        <li>
+        <article>
+          <h3>{modulo.name}</h3>
+        </article>
+      </li>
+      )
+  })
+
   return (
     <div className="App">
       <header className="App-header">
@@ -35,31 +27,7 @@ function App() {
         <h1>React Hack a boss</h1>
         <article>
           <ul>
-          <li>
-            <article>
-              <h3>{modulos[0].name}</h3>
-            </article>
-          </li>
-          <li>
-            <article>
-              <h3>{modulos[1].name}</h3>
-            </article>
-          </li>
-          <li>
-            <article>
-              <h3>{modulos[2].name}</h3>
-            </article>
-          </li>
-          <li>
-            <article>
-              <h3>{modulos[3].name}</h3>
-            </article>
-          </li>
-          <li>
-            <article>
-              <h3>{modulos[4].name}</h3>
-            </article>
-          </li>
+            {modulosLi}
           </ul>
         </article>
       </main>
