@@ -1,8 +1,8 @@
 import Header from './Header';
 import './App.css';
-import Modulos from './modulos';
 import Section from './Section';
 import modulos_1 from './modulos_1.json'
+import modulos_2 from './modulos_2.json'
 
 
 
@@ -13,7 +13,8 @@ function App() {
     <div className="App">
       <Header/>
       <main>
-        <Section title="Modulo" modulos={modulos_1}/>
+        <Section title="Módulo" modulos={modulos_1}/>
+        <Section title="Extras" modulos={modulos_2}/>
       </main>
     </div>
   );
