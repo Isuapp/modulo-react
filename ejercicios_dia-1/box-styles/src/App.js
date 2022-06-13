@@ -14,9 +14,9 @@ import Box from './Box';
 function App() {
     return (
         <div>
-            <Box myClass="box--small"  moreStyles={{backgroundColor:"lightBlue"}}/>
-            <Box myClass="box--medium"  moreStyles={{backgroundColor:"pink"}}/>
-            <Box myClass="box--large" moreStyles={{backgroundColor:"orange"}}/>
+            <Box myClass="box--small"  moreStyles={{backgroundColor:"lightBlue"}}>medium lightBlue box</Box>
+            <Box myClass="box--medium"  moreStyles={{backgroundColor:"pink"}}>medium pink box</Box>
+            <Box myClass="box--large" moreStyles={{backgroundColor:"orange"}}>medium orange box</Box>
         </div>
     );
 }
