@@ -2,15 +2,15 @@ import React from 'react';
 import './App.css';
 
 
-function MediumBox(){
+function MediumBox({myClass, moreStyles}){
 
     const myStyle={
-        backgroundColor:'pink',
+        ...moreStyles,
         fontStyle:'italic',
     };
 
     return(
-        <div className='box box--medium' style={myStyle}>medium pink box</div>
+        <div className={`box ${myClass}`} style={myStyle}>medium pink box</div>
     )
 };
 

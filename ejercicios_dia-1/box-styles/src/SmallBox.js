@@ -2,15 +2,15 @@ import React from 'react';
 import './App.css';
 
 
-function SmallBox(){
+function SmallBox({myClass, moreStyles}){
 
     const myStyle={
-        backgroundColor:'lightBlue',
+        ...moreStyles,
         fontStyle:'italic',
     };
 
      return(
-        <div className='box box--small' style={myStyle}>small lightblue box</div>
+        <div className={`box ${myClass}`} style={myStyle}>small lightblue box</div>
      )
 
 };

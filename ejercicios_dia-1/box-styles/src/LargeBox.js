@@ -2,16 +2,16 @@ import React from 'react';
 import './App.css';
 
 
-function LargeBox(){
+function LargeBox({myClass, moreStyles}){
 
    const myStyle={
-        backgroundColor:'orange',
+        ...moreStyles,   
         fontStyle:'italic',
     };
 
     
     return(
-       <div className='box box--large' style={myStyle}>large orange box</div>
+       <div className={`box ${myClass}`} style={myStyle}>large orange box</div>
     )
 
 };

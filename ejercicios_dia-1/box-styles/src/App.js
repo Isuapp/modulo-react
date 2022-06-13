@@ -16,9 +16,9 @@ import SmallBox from './SmallBox';
 function App() {
     return (
         <div>
-            <SmallBox/>
-            <MediumBox/>
-            <LargeBox/>
+            <SmallBox myClass="box--small"  moreStyles={{backgroundColor:"lightBlue"}}/>
+            <MediumBox myClass="box--medium"  moreStyles={{backgroundColor:"pink"}}/>
+            <LargeBox myClass="box--large" moreStyles={{backgroundColor:"orange"}}/>
         </div>
     );
 }
