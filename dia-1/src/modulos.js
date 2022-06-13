@@ -1,4 +1,4 @@
-import modulos from './modulos.json';
+import modulos from './modulos_1.json';
 
 function Modulos(){
 
