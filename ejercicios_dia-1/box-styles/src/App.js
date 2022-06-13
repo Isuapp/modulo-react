@@ -1,8 +1,6 @@
 import * as React from 'react';
 import './App.css';
-import LargeBox from './LargeBox';
-import MediumBox from './mediumBox';
-import SmallBox from './SmallBox';
+import Box from './Box';
 
 // Añade una prop "className" a cada uno y aplica la clase correcta.
 // Las clases disponibles son: "box", "box--large", "box--medium", "box--small".
@@ -16,9 +14,9 @@ import SmallBox from './SmallBox';
 function App() {
     return (
         <div>
-            <SmallBox myClass="box--small"  moreStyles={{backgroundColor:"lightBlue"}}/>
-            <MediumBox myClass="box--medium"  moreStyles={{backgroundColor:"pink"}}/>
-            <LargeBox myClass="box--large" moreStyles={{backgroundColor:"orange"}}/>
+            <Box myClass="box--small"  moreStyles={{backgroundColor:"lightBlue"}}/>
+            <Box myClass="box--medium"  moreStyles={{backgroundColor:"pink"}}/>
+            <Box myClass="box--large" moreStyles={{backgroundColor:"orange"}}/>
         </div>
     );
 }
