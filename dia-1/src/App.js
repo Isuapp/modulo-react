@@ -1,4 +1,4 @@
-import logo from './logo.png';
+import Header from './Header';
 import './App.css';
 import modulos from './modulos.json'
 
@@ -20,9 +20,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
+      <Header/>
       <main>
         <h1>React Hack a boss</h1>
         <article>
