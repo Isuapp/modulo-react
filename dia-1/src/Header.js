@@ -2,8 +2,9 @@ import logo from './logo.png';
 
 function Header(){
     return(
-        <header className="App-header">
+    <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <h1>React Hack a boss</h1>
       </header>
     )
 }
