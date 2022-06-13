@@ -1,6 +1,5 @@
 import Header from './Header';
 import './App.css';
-import modulos from './modulos.json'
 import Modulos from './modulos';
 
 
