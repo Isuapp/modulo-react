@@ -1,0 +1,7 @@
+.message{
+    background-color: lightcyan;
+    display: flex;
+    align-items:stretch;
+    gap:1rem;
+    padding: .5rem;
+}

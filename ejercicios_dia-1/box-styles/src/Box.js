@@ -12,7 +12,7 @@ function Box({myClass='', moreStyles, children}){
     };
 
     return(
-        <div className={`box ${myClass}`} style={myStyle}>{children}</div>
+        <div className={`box ${myClass}`} style={myStyle}>{childeren}</div>
     )
 };
 

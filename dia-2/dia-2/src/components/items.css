@@ -1,0 +1,10 @@
+section{
+    width:80%;
+    margin:auto;
+}
+
+section>form{
+    display: flex;
+    flex-direction: column;
+    
+}
