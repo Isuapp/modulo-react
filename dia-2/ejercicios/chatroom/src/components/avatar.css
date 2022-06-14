@@ -1,0 +1,6 @@
+.avatar{
+     width: 33%;
+}
+.avatar>img{
+    width: 100%;
+}
