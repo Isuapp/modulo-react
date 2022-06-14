@@ -1,10 +1,10 @@
 
 import './avatar.css'
-const Avatar = ()=>{
+const Avatar = ({imgName})=>{
 
     return(
         <div className='avatar'>
-            <img src='/avatars/456327.png' alt="avatar user"/>
+            <img src={`/avatars/${imgName}.png`} alt="avatar user"/>
         </div>
     )
 }
