@@ -1,0 +1,16 @@
+.sendMessage--wrapper{
+    background-color: tan;
+}
+
+form{
+    display: flex;
+}
+
+.sendMessage{
+    width:100%;
+    padding:.5rem;
+}
+
+button{
+    padding:.5rem;
+}
