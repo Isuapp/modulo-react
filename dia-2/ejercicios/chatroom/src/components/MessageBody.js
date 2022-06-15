@@ -3,7 +3,7 @@ const MessageBody = ({children})=>{
 
     return(
         <div className='message-body'>
-            <p>{children}</p>
+            {children}
         </div>
     )
 }

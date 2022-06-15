@@ -1,5 +1,5 @@
 import './chatRoomHeader.css';
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 
 const ChatRoomHeader = ()=>{
     
@@ -9,9 +9,13 @@ const ChatRoomHeader = ()=>{
 
         // Set interval escuchará cada segundo y setTime 
         // cambiará la fecha cada segundo
-        setInterval(()=>{
-             setTime(new Date())
-        },1000)
+     useEffect(()=>{
+        const interval = setInterval(()=>{
+            setTime(new Date())
+       },1000)
+
+       return ()=> clearInterval(interval)
+     })
     
 
     return(

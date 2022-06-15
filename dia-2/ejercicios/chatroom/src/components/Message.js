@@ -1,27 +1,18 @@
-import Avatar from './Avatar';
 import './message.css'
-import MessageBody from './MessageBody';
-import messagesDB from '../messages.json'
 import Sent from './Sent';
+import Avatar from './Avatar';
+import MessageBody from './MessageBody';
 
-const Message = ()=>{
-
-    const allMessages = messagesDB.map((message)=>{
-        return(
-            <div className='message' key={message.id}>
-                <Avatar imgName={message.author}/>
-                <MessageBody>
-                    {message.body}
-                    <Sent>{message.date}</Sent>
-                </MessageBody>
-            </div>
-        )
-    })
+const Message = ({message})=>{
 
     return(
-        <>
-           {allMessages}
-        </>
+        <li className='message'>
+            <Avatar imgName={message.author}/>
+            <MessageBody>
+                {message.body}
+                <Sent>{message.date}</Sent>
+            </MessageBody>
+        </li>
     )
 }
 
