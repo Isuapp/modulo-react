@@ -1,12 +1,12 @@
 import Avatar from './Avatar';
 import './message.css'
 import MessageBody from './MessageBody';
-import messages from '../messages.json'
+import messagesDB from '../messages.json'
 import Sent from './Sent';
 
 const Message = ()=>{
 
-    const addMessage = messages.map((message)=>{
+    const allMessages = messagesDB.map((message)=>{
         return(
             <div className='message' key={message.id}>
                 <Avatar imgName={message.author}/>
@@ -20,7 +20,7 @@ const Message = ()=>{
 
     return(
         <>
-           {addMessage}
+           {allMessages}
         </>
     )
 }
