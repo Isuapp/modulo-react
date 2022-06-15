@@ -3,17 +3,28 @@ import Sent from './Sent';
 import Avatar from './Avatar';
 import MessageBody from './MessageBody';
 
-const Message = ({message})=>{
+const Message = ({messages})=>{
 
-    return(
-        <li className='message'>
-            <Avatar imgName={message.author}/>
-            <MessageBody>
-                {message.body}
-                <Sent>{message.date}</Sent>
-            </MessageBody>
-        </li>
-    )
+
+    const allMessages = messages.map((itemMessage)=>{
+        return (
+            <li className='message' key={itemMessage.id}>
+                <Avatar imgName={itemMessage.author}/>
+                <MessageBody>
+                    {itemMessage.body}
+                    <Sent>{itemMessage.date}</Sent>
+                </MessageBody>
+            </li>
+            )
+     })
+     
+     return(
+        <ul>
+            {allMessages}
+        </ul>
+     )
+ 
+
 }
 
 export default Message;
