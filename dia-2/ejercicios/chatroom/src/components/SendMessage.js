@@ -27,8 +27,11 @@ const SendMessage = ({messages,setMessages})=>{
     
 
     return(
-        <div className='sendMessage--wrapper'>
-            <Avatar />
+        <div className='sendMessage_wrapper'>
+            <div >
+            <img src='/avatars/456327.png'className="avatar_sendMessage"/>
+            <p>Obi wan Kenobi</p>
+            </div>
             <form onSubmit={sendMessage}>
                 <input className="sendMessage" type="text" name="message" ref={inputRef}></input>
                 <button>enviar</button>

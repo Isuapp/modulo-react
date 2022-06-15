@@ -1,4 +1,4 @@
-.sendMessage--wrapper{
+.sendMessage_wrapper{
     background-color: tan;
 }
 
@@ -12,5 +12,14 @@ form{
 }
 
 button{
+    padding:.5rem;
+}
+.sendMessage_wrapper>div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.avatar_sendMessage{
+    width:3.5rem;
     padding:.5rem;
 }
