@@ -7,15 +7,15 @@ const ChatRoomHeader = ()=>{
     // la fecha y hora y el manejador
     const [time,setTime] = useState(new Date());
 
-        // Set interval escuchará cada segundo y setTime 
-        // cambiará la fecha cada segundo
+    // Set interval escuchará cada segundo y setTime 
+    // cambiará la fecha cada segundo
      useEffect(()=>{
         const interval = setInterval(()=>{
             setTime(new Date())
        },1000)
 
        return ()=> clearInterval(interval)
-     })
+     },[])
     
 
     return(
