@@ -1,4 +1,7 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
+import PageController from './PageController';
+
+import './ricksearch.css'
 
 const RickSearch = ()=>{
 
@@ -11,17 +14,19 @@ const RickSearch = ()=>{
     const [data,setData] = useState(null);
     const [error,setError] = useState(null);
 
+    const [page, setPage] = useState(null);
 
-    const handleSubmit = async (e)=>{
-        e.preventDefault();
+    
 
-        setData(null);
-        setLoading(true);
-        setError(null);
+    // Nuestro amigo useEffect siempre atento a las variables del array
+    useEffect(()=>{ search(); },[name, status, species, page])
 
+
+    // Petición a la api
+    const search = async ()=>{
         try {
             const response = await fetch(
-                `https://rickandmortyapi.com/api/character?name=${name}&status=${status}&species=${species}&`
+                `https://rickandmortyapi.com/api/character?name=${name}&status=${status}&species=${species}&page=${page}`
             );
               
             // Obtenemos la informacion del body
@@ -40,8 +45,32 @@ const RickSearch = ()=>{
         }finally{
             setLoading(false)
         }
-     
     }
+
+    // Llamada al formulario
+    const handleSubmit = async (e)=>{
+        e.preventDefault();
+
+        setData(null);
+        setLoading(true);
+        setError(null);
+
+        search();
+    
+    }
+
+    // Cambiamos de página
+    const next = ()=> {
+        if(page< data?.info?.pages) setPage(page+1)
+        else setPage(null)
+        setPage(page+1);
+    };
+    const prev = ()=> {
+        if(page>1) setPage(page-1);
+        else setPage(null)
+    };
+
+
 
     return(
         <main>
@@ -74,14 +103,15 @@ const RickSearch = ()=>{
                         {data.results.map((character)=>{
                             return(
                                 <li key={character.id}>
-                                    <p>{character.name}</p>
-                                    <img src={character.image}/>
+                                    <img src={character.image} alt={`image of ${character.image}`}/>
+                                    <h4>{character.name}</h4>
                                 </li>
                             )
                         })}
                      </ul>
                 </>
             )}
+            <PageController next={next} prev={prev}/>
         </main>
     )
 }
