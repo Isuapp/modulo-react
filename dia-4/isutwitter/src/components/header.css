@@ -1,6 +1,7 @@
 
 .logo {
     pointer-events: none;
+    width: 5rem;
   }
   
   @media (prefers-reduced-motion: no-preference) {
@@ -12,9 +13,8 @@ header{
     background-color: #282c34;
     height: 15rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     font-size: calc(10px + 2vmin);
     color: white;
   }
@@ -23,13 +23,13 @@ header{
       transform: rotate(0deg);
     }
     25% {
-      transform: rotate(45deg);
+      transform: rotate(20deg);
     }
     50% {
       transform: rotate(0deg);
     } 
     75% {
-      transform: rotate(-45deg);
+      transform: rotate(-20deg);
     }
     100% {
       transform: rotate(0deg);

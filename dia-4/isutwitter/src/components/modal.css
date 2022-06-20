@@ -1,0 +1,8 @@
+.modal_wraper{
+    width:100vw;
+    height: 100vh;
+    background-color: brown;
+    position:fixed;
+    top:0;
+}
+

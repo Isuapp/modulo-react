@@ -1,0 +1,17 @@
+ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li{
+    color:antiquewhite;
+    background-color:peru;
+    border-radius: 5px;
+    display:flex;
+    flex-direction: column;
+    width: 9rem;
+    padding:.5rem;
+    margin:.5rem;
+    gap:.5rem;
+}

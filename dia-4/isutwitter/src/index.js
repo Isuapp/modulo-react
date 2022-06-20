@@ -4,10 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { TokenProvider } from './TokenContext.js'
+import { ModalProvider } from './ModalContext';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ModalProvider>
+      <TokenProvider>
+        <App />
+      </TokenProvider>
+    </ModalProvider>
   </React.StrictMode>
 );
 
