@@ -10,11 +10,12 @@
   }
 }
 header{
-    background-color:palevioletred;
+    background-color: #282c34;
     height: 15rem;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding:0 2rem;
     font-size: calc(10px + 2vmin);
     color: white;
 }

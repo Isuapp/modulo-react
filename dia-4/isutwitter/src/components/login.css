@@ -1,0 +1,30 @@
+form{
+    display: flex;
+    flex-direction: column;
+    width:15rem;
+    height: 15rem;
+    background-color: whitesmoke;
+    padding:3rem;
+    border-radius: 5px;
+}
+form> label{
+    margin-bottom:.2rem;
+}
+form>input{
+    border:none;
+    border-bottom:1px solid #282c34;
+    margin-bottom: 3rem;
+    background-color: transparent;
+    padding:.5rem .5rem;
+    outline: none;
+}
+form>input:focus{
+    padding: .2rem;
+}
+form>button{
+    padding:1rem;
+    border:none;
+    background-color: coral;
+    color:#282c34;
+    border-radius:5px;
+}

@@ -6,15 +6,18 @@ import LisTweets from './components/ListTweets';
 import Modal from './components/Modal';
 
 import { useModal } from './ModalContext';
+import { useDarkModeContext } from './darkModeContext';
 
 
 
-function App() {
+const App = ()=> {
 
-  const [modal] = useModal();
+const [modal] = useModal();
+const [darkMode] = useDarkModeContext();
+
   return (
-    <div className="App">
-      <Header className="App-header"/>
+    <div className={darkMode ? 'dark' : App}>
+      <Header className={darkMode?  'darkHeader' : "App-header"}/>
       <LisTweets />
       {modal && <Modal>{modal}</Modal>}
       <Footer/>

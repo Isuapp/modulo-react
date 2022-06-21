@@ -4,9 +4,9 @@ const Modal = ({children})=>{
 
     return(
         <div className='modal_wraper'>
-            <div>
+          
                 {children}
-            </div>
+          
         </div>
     )
 }

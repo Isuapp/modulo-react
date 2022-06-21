@@ -4,20 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import { TokenProvider } from './TokenContext.js'
-import { ModalProvider } from './ModalContext';
-import { DarkModeProvider } from './darkModeContext';
+import { BrowserRouter } from 'react-router-dom';
+import { UserProvider } from './utils/userContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <DarkModeProvider>
-      <ModalProvider>
-        <TokenProvider>
-          <App />
-        </TokenProvider>
-      </ModalProvider>
-    </DarkModeProvider>
+    <UserProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </UserProvider>
   </React.StrictMode>
 );
 

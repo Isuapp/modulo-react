@@ -1,4 +1,5 @@
 
+import { useReducer } from 'react';
 import useFetch from '../hooks/useFetch'
 import { useToken } from '../TokenContext';
 
@@ -16,10 +17,10 @@ const Profile =()=>{
     
     return(
         <div>
-            <p>{data.user.email}</p>
+            <p>{data?.user.email}</p>
             <button onClick={logout}>logout</button>
         </div>
-         
+    
          )
 }
 
