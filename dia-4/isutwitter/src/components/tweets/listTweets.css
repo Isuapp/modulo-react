@@ -1,0 +1,48 @@
+
+ul{
+    list-style: none;
+    width:50%;
+    padding:9rem 4rem 4rem 4rem;
+    margin:auto;
+}
+ul > li {
+    border-radius: 2px;
+    margin:1rem;
+    display: flex;
+    align-items: flex-start;
+    gap:2rem;
+    padding: 1rem;
+    background-color: white;
+}
+ul > li> div.content > span{
+    font-weight: bold;
+}
+ul > li > .imageUser-wraper{
+    padding:.5rem;
+    border-radius: 100%;
+    box-shadow:0px 0px 5px rgba(0, 0, 0, 0.479);
+    width:5rem;
+    height: 5rem;
+    display: flex;
+}
+ul > li > .imageUser-wraper > img{
+    width: 90%;
+    display: block;
+    margin: auto;
+}
+ul > li > .content > p{
+    padding:1rem 0;
+}
+ul > li > .content > .image-wraper{
+    border-radius: 5px;
+    overflow: hidden;
+}
+ul > li > .content > .image-wraper > img{
+    object-fit: contain;
+    
+}
+
+ul > li.darkMode {
+    background-color: var(--mainColor-dark);
+    color:var(--white)
+}

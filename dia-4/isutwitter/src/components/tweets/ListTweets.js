@@ -1,9 +1,9 @@
 import { useEffect, useState} from 'react';
-import logo from '../logo.png'
+import logo from '../../assets/brand/logo_isaac_min.svg';
 
 import './listTweets.css';
 
-const LisTweets = ()=>{
+const LisTweets = ({className})=>{
 
     const [tweets, setTweets] = useState([]);
     const  [loading, setLoading] = useState(false);
@@ -30,22 +30,23 @@ const LisTweets = ()=>{
 
     return(
         <ul>
-            <h3>LISTA DE TWEETS</h3>
             {loading ? 
 
             <p>Cargando...</p>  : 
             
             tweets.map((tweet)=>{
                 return(
-                    <li key={tweet.id}>
-                        <div className='user' >
-                            <div className='imageWrapper'>
-                                <img src={logo} />
-                            </div>
-                            <img src={`http://localhost:4000/${tweet.image}`} alt='tweet'/>
-                            <h4>{tweet.email}</h4>
+                    <li key={tweet.id} className={className}>
+                        <div className='imageUser-wraper' >
+                            <img src={logo} />
                         </div>
-                        <p>{tweet.text}</p>
+                        <div className='content' >
+                            <span>{tweet.email}</span>
+                            <p>{tweet.text}</p>
+                            <div className='image-wraper'>
+                                <img src={`http://localhost:4000/${tweet.image}`} alt='tweet'/>
+                            </div>
+                        </div>
                     </li>
                 )
             })}

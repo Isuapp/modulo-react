@@ -1,20 +1,26 @@
+*{
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size:16px;
+}
+
 :root{
-  --mainColor: #282c34
+  --mainColor-dark: #282c34;
+  --mainColor-light:#bf4e34ff;
+  --white:whitesmoke;
 }
 
-.App {
-  text-align: center;
-}
-.dark{
-  background-color: var(--mainColor);
+h1{
+  font-size: 2rem;
 }
 
-li{
-  list-style: none;
+.darkMode{
+  background-color: var(--mainColor-dark);
+  color:var(--white)
 }
-
-.App-link {
-  color: #61dafb;
+.lightMode{
+  background-color: var(--white);
 }
 
 

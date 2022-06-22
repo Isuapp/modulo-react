@@ -1,12 +1,12 @@
 :root{
-  --mainColor: #282c34
+  --mainColor_light:#ed6b4eff;
+  --mainColor_dark: #282c34;
 }
-
 .App {
   text-align: center;
 }
 .dark{
-  background-color: var(--mainColor);
+  background-color: var(--mainColor_dark);
 }
 
 li{

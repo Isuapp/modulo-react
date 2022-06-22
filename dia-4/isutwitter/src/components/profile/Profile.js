@@ -1,12 +1,16 @@
+import { useDarkModeContext } from '../../context/darkModeContext';
+import useFetch from '../../hooks/useFetch'
+import { useToken } from '../../context/TokenContext';
 
-import { useReducer } from 'react';
-import useFetch from '../hooks/useFetch'
-import { useToken } from '../TokenContext';
+import Button from '../button/Button';
+
+import './profile.css'
 
 const Profile =()=>{
 
     const { data, status } = useFetch('http://localhost:4000/users');
     const [, setLocalStorageToken] = useToken();
+    const [darkMode] = useDarkModeContext();
 
     if(status==='loading') return <p>Cargando...</p>
 
@@ -16,9 +20,9 @@ const Profile =()=>{
     }
     
     return(
-        <div>
+        <div className='profile'>
             <p>{data?.user.email}</p>
-            <button onClick={logout}>logout</button>
+            <Button click={logout} className={darkMode ? 'light' : 'dark'}>logout</Button>
         </div>
     
          )

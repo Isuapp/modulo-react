@@ -1,0 +1,51 @@
+/* 
+------------------
+*** DARK MODE ***
+------------------
+*/
+button.dark{
+  background-color: var(--mainColor-light);
+  color: var(--white);
+  border:2.5px solid var(--white);
+  padding:.5rem 1rem;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  }
+  
+button.dark:hover{
+  background-color: var(--white);
+  color:var(--mainColor-light);
+}
+button.dark:active{
+  padding: .25rem .5rem;
+  font-size: .9rem;
+}
+
+/* 
+------------------
+*** LIGHT MODE ***
+------------------
+*/
+ button.light{
+  background-color: var(--mainColor-light);
+  color: var(--white);
+  border:2.5px solid var(--mainColor-light);
+  padding:.5rem 1rem;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button.light:hover{
+  background-color: transparent;
+  color:var(--mainColor-light);
+}
+button.light:active{
+  padding: .25rem .5rem;
+  font-size: .9rem;
+  color:var(--white);
+  border:2.5px solid var(--white);
+}

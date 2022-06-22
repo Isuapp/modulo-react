@@ -4,9 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import { TokenProvider } from './TokenContext.js'
-import { ModalProvider } from './ModalContext';
-import { DarkModeProvider } from './darkModeContext';
+import { TokenProvider } from './context/TokenContext.js'
+import { ModalProvider } from './context/ModalContext';
+import { DarkModeProvider } from './context/darkModeContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

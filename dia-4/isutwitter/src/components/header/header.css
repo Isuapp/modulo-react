@@ -10,13 +10,21 @@
   }
 }
 header{
-    background-color:palevioletred;
-    height: 15rem;
+    position: fixed;
+    width: 100%;
+    background-color:var(--mainColor-light);
+    height: 5rem;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     font-size: calc(10px + 2vmin);
-    color: white;
+    color: var(--white);
+    padding:0 1.5rem;
+}
+header>div{
+  display: flex;
+  align-items: center;
+  gap:1rem;
 }
 header.darkHeader{
   background-color: #282c34;

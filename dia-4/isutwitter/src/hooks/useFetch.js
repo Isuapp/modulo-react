@@ -1,4 +1,4 @@
-import { useToken } from '../TokenContext';
+import { useToken } from '../context/TokenContext';
 
 import {useState, useEffect} from 'react';
 
